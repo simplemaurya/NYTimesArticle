@@ -22,7 +22,7 @@ struct RegisterView: View {
       NavigationView{
         VStack {
         //Spacer()
-        Text("NewYork Times").font(.title).fontWeight(.medium)
+        Text("The New York Times").font(.title).fontWeight(.medium)
         .font(.custom("Abadi MT Condensed Light", size: 8))
          .padding(.top,-100)
          .foregroundColor(lightBlueColor)
@@ -33,6 +33,7 @@ struct RegisterView: View {
         .font(.subheadline)
         .fontWeight(.medium)
         TextField("Username", text: $username)
+        .accentColor(lightBlueColor)
         .padding()
         .background(textFieldBGColor)
         .cornerRadius(4.0)
@@ -44,6 +45,7 @@ struct RegisterView: View {
         .font(.subheadline)
         .fontWeight(.medium)
         TextField("Email", text: $email)
+        .accentColor(lightBlueColor)
         .padding()
         .background(textFieldBGColor)
         .cornerRadius(4.0)
@@ -56,12 +58,13 @@ struct RegisterView: View {
         .fontWeight(.medium)
         //.frame(width: 50, alignment: .leading)
         SecureField("Password", text: self.$password)
+        .accentColor(lightBlueColor)
         .padding()
         .background(textFieldBGColor)
         .cornerRadius(4.0)
         }
         
-        NavigationLink(destination: ContentView(), isActive: $navigate) {
+        NavigationLink(destination: ArticleView(username: self.$username,email: self.$email, password : self.$password), isActive: $navigate) {
         Button(action: {self.validate()}) {
             HStack(alignment: .center) {
                 Spacer()
@@ -85,9 +88,6 @@ struct RegisterView: View {
         }
       }
      .onAppear(){
-        self.username = ""
-        self.password = ""
-        self.email = ""
         UINavigationBar.appearance().barTintColor = barTintColor
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
       }

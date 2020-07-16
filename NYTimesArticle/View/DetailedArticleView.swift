@@ -33,6 +33,7 @@ struct DetailedArticleView: View {
                     Image(systemName: "calendar")
                     .foregroundColor(.white)
                     Text(article.date)
+                    .fixedSize(horizontal: true, vertical: false)
                     .font(.custom("Arial", size: 13))
                    .foregroundColor(.white)
                 }

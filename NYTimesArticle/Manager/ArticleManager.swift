@@ -23,7 +23,10 @@ class ArticleManager: ObservableObject{
                     article.description = arr[i].title
                     article.date = arr[i].published_date
                     article.abstract = arr[i].abstract
-                    article.thumbnail = arr[i].media[0].media_metadata[2].url
+                    if arr[i].media.count > 0{
+                        article.thumbnail = arr[i].media[0].media_metadata[2].url
+                    }
+                    
                     self.articleArr.append(article)
                 }
             }            

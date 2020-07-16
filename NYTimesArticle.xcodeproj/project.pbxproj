@@ -10,13 +10,12 @@
 		BA18290324BFB7A2008AA72E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA18290224BFB7A2008AA72E /* AppDelegate.swift */; };
 		BA18290524BFB7A2008AA72E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA18290424BFB7A2008AA72E /* SceneDelegate.swift */; };
 		BA18290824BFB7A2008AA72E /* NYTimesArticle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA18290624BFB7A2008AA72E /* NYTimesArticle.xcdatamodeld */; };
-		BA18290A24BFB7A2008AA72E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA18290924BFB7A2008AA72E /* ContentView.swift */; };
+		BA18290A24BFB7A2008AA72E /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA18290924BFB7A2008AA72E /* ArticleView.swift */; };
 		BA18290C24BFB7A6008AA72E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA18290B24BFB7A6008AA72E /* Assets.xcassets */; };
 		BA18290F24BFB7A6008AA72E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA18290E24BFB7A6008AA72E /* Preview Assets.xcassets */; };
 		BA18291224BFB7A6008AA72E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA18291024BFB7A6008AA72E /* LaunchScreen.storyboard */; };
 		BA18292324BFB8A2008AA72E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA18291924BFB8A1008AA72E /* APIManager.swift */; };
 		BA18292424BFB8A2008AA72E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA18291A24BFB8A1008AA72E /* AppConstants.swift */; };
-		BA18292524BFB8A2008AA72E /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA18291B24BFB8A1008AA72E /* NavigationConfigurator.swift */; };
 		BA18292624BFB8A2008AA72E /* ArticleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA18291C24BFB8A1008AA72E /* ArticleRowView.swift */; };
 		BA18292724BFB8A2008AA72E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA18291D24BFB8A1008AA72E /* DataModel.swift */; };
 		BA18292824BFB8A2008AA72E /* ArticleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA18291E24BFB8A1008AA72E /* ArticleManager.swift */; };
@@ -33,14 +32,13 @@
 		BA18290224BFB7A2008AA72E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA18290424BFB7A2008AA72E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BA18290724BFB7A2008AA72E /* NYTimesArticle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NYTimesArticle.xcdatamodel; sourceTree = "<group>"; };
-		BA18290924BFB7A2008AA72E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BA18290924BFB7A2008AA72E /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		BA18290B24BFB7A6008AA72E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA18290E24BFB7A6008AA72E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BA18291124BFB7A6008AA72E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA18291324BFB7A6008AA72E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA18291924BFB8A1008AA72E /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		BA18291A24BFB8A1008AA72E /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		BA18291B24BFB8A1008AA72E /* NavigationConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
 		BA18291C24BFB8A1008AA72E /* ArticleRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleRowView.swift; sourceTree = "<group>"; };
 		BA18291D24BFB8A1008AA72E /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		BA18291E24BFB8A1008AA72E /* ArticleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleManager.swift; sourceTree = "<group>"; };
@@ -82,21 +80,11 @@
 		BA18290124BFB7A2008AA72E /* NYTimesArticle */ = {
 			isa = PBXGroup;
 			children = (
-				BA18290224BFB7A2008AA72E /* AppDelegate.swift */,
-				BA18290424BFB7A2008AA72E /* SceneDelegate.swift */,
-				BA18291A24BFB8A1008AA72E /* AppConstants.swift */,
-				BA18291924BFB8A1008AA72E /* APIManager.swift */,
-				BA18291E24BFB8A1008AA72E /* ArticleManager.swift */,
-				BA18291D24BFB8A1008AA72E /* DataModel.swift */,
-				BA18290924BFB7A2008AA72E /* ContentView.swift */,
-				BA18291C24BFB8A1008AA72E /* ArticleRowView.swift */,
-				BA18292224BFB8A2008AA72E /* DetailedArticleView.swift */,
-				BA18291F24BFB8A1008AA72E /* ImageViewContainer.swift */,
-				BA18291B24BFB8A1008AA72E /* NavigationConfigurator.swift */,
-				BA18292024BFB8A1008AA72E /* RegisterView.swift */,
-				BA18292124BFB8A2008AA72E /* RemoteImageURL.swift */,
-				BA18292E24BFB9B4008AA72E /* ActivityIndicator.swift */,
-				BA18292D24BFB9B4008AA72E /* LoadingView.swift */,
+				BA18293524C019DF008AA72E /* AppDelegate */,
+				BA18293224C0190F008AA72E /* Manager */,
+				BA18293324C01921008AA72E /* Model */,
+				BA18293124C018DA008AA72E /* View */,
+				BA18293424C0194D008AA72E /* HelperClass */,
 				BA18290B24BFB7A6008AA72E /* Assets.xcassets */,
 				BA18291024BFB7A6008AA72E /* LaunchScreen.storyboard */,
 				BA18291324BFB7A6008AA72E /* Info.plist */,
@@ -112,6 +100,63 @@
 				BA18290E24BFB7A6008AA72E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BA18293124C018DA008AA72E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA18292024BFB8A1008AA72E /* RegisterView.swift */,
+				BA18290924BFB7A2008AA72E /* ArticleView.swift */,
+				BA18291C24BFB8A1008AA72E /* ArticleRowView.swift */,
+				BA18292224BFB8A2008AA72E /* DetailedArticleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA18293224C0190F008AA72E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				BA18291924BFB8A1008AA72E /* APIManager.swift */,
+				BA18291E24BFB8A1008AA72E /* ArticleManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		BA18293324C01921008AA72E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA18291D24BFB8A1008AA72E /* DataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA18293424C0194D008AA72E /* HelperClass */ = {
+			isa = PBXGroup;
+			children = (
+				BA18291F24BFB8A1008AA72E /* ImageViewContainer.swift */,
+				BA18292124BFB8A2008AA72E /* RemoteImageURL.swift */,
+				BA18292E24BFB9B4008AA72E /* ActivityIndicator.swift */,
+				BA18292D24BFB9B4008AA72E /* LoadingView.swift */,
+				BA18293624C019F9008AA72E /* AppConstant */,
+			);
+			path = HelperClass;
+			sourceTree = "<group>";
+		};
+		BA18293524C019DF008AA72E /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				BA18290224BFB7A2008AA72E /* AppDelegate.swift */,
+				BA18290424BFB7A2008AA72E /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		BA18293624C019F9008AA72E /* AppConstant */ = {
+			isa = PBXGroup;
+			children = (
+				BA18291A24BFB8A1008AA72E /* AppConstants.swift */,
+			);
+			path = AppConstant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,9 +235,8 @@
 				BA18292824BFB8A2008AA72E /* ArticleManager.swift in Sources */,
 				BA18290524BFB7A2008AA72E /* SceneDelegate.swift in Sources */,
 				BA18292324BFB8A2008AA72E /* APIManager.swift in Sources */,
-				BA18290A24BFB7A2008AA72E /* ContentView.swift in Sources */,
+				BA18290A24BFB7A2008AA72E /* ArticleView.swift in Sources */,
 				BA18292B24BFB8A2008AA72E /* RemoteImageURL.swift in Sources */,
-				BA18292524BFB8A2008AA72E /* NavigationConfigurator.swift in Sources */,
 				BA18292F24BFB9B4008AA72E /* LoadingView.swift in Sources */,
 				BA18292624BFB8A2008AA72E /* ArticleRowView.swift in Sources */,
 				BA18292C24BFB8A2008AA72E /* DetailedArticleView.swift in Sources */,

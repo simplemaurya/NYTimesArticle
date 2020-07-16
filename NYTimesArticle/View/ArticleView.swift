@@ -8,9 +8,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ArticleView: View {
     @ObservedObject var model = ArticleManager()
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @Binding var username : String
+    @Binding var email : String
+    @Binding var password : String
     
     var body: some View {
        // NavigationView{
@@ -26,11 +29,6 @@ struct ContentView: View {
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle(Text("Home"),displayMode: .inline)
-        .accentColor(.white)
-//        .background(NavigationConfigurator { nc in
-//            nc.navigationBar.barTintColor = barTintColor
-//            nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
-//        })
         .navigationBarItems(trailing:
             Button(action: {
                 self.logout()
@@ -39,14 +37,14 @@ struct ContentView: View {
                 .accentColor(.white)
             }
         )
-            .onAppear(){
-//        UINavigationBar.appearance().barTintColor = barTintColor
-//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        .onAppear(){
+        self.username = ""
+        self.email = ""
+            self.password = ""
         UITableView.appearance().separatorStyle = .none
         UITableView.appearance().showsVerticalScrollIndicator = false
           self.callArticleApi()
-      }
-        .accentColor(.white)
+           }
         }
     }
     
@@ -62,8 +60,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
